@@ -490,7 +490,8 @@ button:disabled {
 
   .mistakes-bar {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
   }
 
   .hero {

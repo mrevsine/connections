@@ -255,17 +255,29 @@ async function submitGuess() {
       tile.addEventListener("animationend", handler);
     });
   } else {
+    // Ensure all incorrect tiles start shaking in perfect sync.
+    // Set zero delay and clear any prior animation state, then add class in RAF.
     activeTiles.forEach((tile) => {
-      const cls = "shake";
-      tile.classList.add(cls, "shaking");
-      const handler = function onEnd(e) {
-        if (e.animationName === "shake") {
-          tile.classList.remove(cls, "shaking");
-          tile.style.animationDelay = "";
-          tile.removeEventListener("animationend", handler);
-        }
-      };
-      tile.addEventListener("animationend", handler);
+      tile.style.animationDelay = "0ms";
+      tile.classList.remove("shake");
+    });
+
+    // Force a reflow so the browser registers the class removal/reset.
+    void elements.board.offsetWidth;
+
+    requestAnimationFrame(() => {
+      activeTiles.forEach((tile) => {
+        const cls = "shake";
+        tile.classList.add(cls, "shaking");
+        const handler = function onEnd(e) {
+          if (e.animationName === "shake") {
+            tile.classList.remove(cls, "shaking");
+            tile.style.animationDelay = "";
+            tile.removeEventListener("animationend", handler);
+          }
+        };
+        tile.addEventListener("animationend", handler);
+      });
     });
   }
 
