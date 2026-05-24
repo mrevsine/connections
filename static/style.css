@@ -504,16 +504,13 @@ button:disabled {
 
 @media (max-width: 700px) {
   .app-shell {
-    width: min(100vw - 20px, 1180px);
+    width: calc(100vw - 20px);
     padding-top: 16px;
-  }
-
-  .board {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .tile {
     min-height: 70px;
+    font-size: 0.85rem;
   }
 
   .controls-panel {
@@ -521,13 +518,15 @@ button:disabled {
   }
 
   .action-row {
-    flex-direction: row;
-    flex-wrap: wrap;
+    gap: 8px;
   }
 
   select,
   .primary-button,
   .ghost-button {
-    width: 100%;
+    flex: 1 1 auto;
+    min-width: 70px;
+    font-size: 0.9rem;
+    padding: 10px 8px;
   }
 }
