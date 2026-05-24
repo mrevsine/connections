@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Connections</title>
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <div class="title-block">
+          <p class="eyebrow">Word puzzle</p>
+          <h1>Mahler & Michaela's Connections</h1>
+        </div>
+
+        <div class="controls-panel">
+          <label class="field">
+            <span>Game</span>
+            <select id="game-select"></select>
+          </label>
+          <button id="restart-button" class="ghost-button" type="button">Restart</button>
+        </div>
+      </header>
+
+      <section class="status-strip" aria-label="Game status">
+        <div id="status-message"></div>
+      </section>
+
+      <section class="board-shell">
+        <p class="board-prompt">Create four groups of four!</p>
+        <div id="overlay-message" class="overlay-message"></div>
+        <div id="solved-groups" class="solved-groups solved-stack" aria-live="polite"></div>
+        <div id="board" class="board" aria-live="polite"></div>
+      </section>
+
+      <section class="mistakes-bar" aria-label="Mistakes remaining">
+        <span class="mistakes-label">Mistakes Remaining:</span>
+        <div id="mistakes-circles" class="mistakes-circles" aria-hidden="true"></div>
+      </section>
+
+      <section class="action-row">
+        <button id="shuffle-button" class="ghost-button" type="button">Shuffle</button>
+        <button id="deselect-button" class="ghost-button" type="button">Deselect all</button>
+        <button id="submit-button" class="primary-button" type="button">Submit</button>
+      </section>
+    </main>
+
+    <script src="/static/app.js" defer></script>
+  </body>
+</html>

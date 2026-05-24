@@ -1,0 +1,56 @@
+{
+  "games": [
+    {
+      "id": "sample-1",
+      "title": "Sample Connections 1",
+      "groups": [
+        {
+          "difficulty": "yellow",
+          "category": "Planets in our solar system",
+          "terms": ["Mercury", "Venus", "Earth", "Mars"]
+        },
+        {
+          "difficulty": "green",
+          "category": "Common musical instruments",
+          "terms": ["Piano", "Guitar", "Violin", "Drum"]
+        },
+        {
+          "difficulty": "blue",
+          "category": "Basic geometric shapes",
+          "terms": ["Circle", "Square", "Triangle", "Rectangle"]
+        },
+        {
+          "difficulty": "purple",
+          "category": "Fruits",
+          "terms": ["Apple", "Banana", "Cherry", "Grape"]
+        }
+      ]
+    },
+    {
+      "id": "sample-2",
+      "title": "Sample Connections 2",
+      "groups": [
+        {
+          "difficulty": "yellow",
+          "category": "Things with pages",
+          "terms": ["Book", "Magazine", "Notebook", "Catalog"]
+        },
+        {
+          "difficulty": "green",
+          "category": "Things you can throw",
+          "terms": ["Ball", "Frisbee", "Javelin", "Pillow"]
+        },
+        {
+          "difficulty": "blue",
+          "category": "Weather words",
+          "terms": ["Rain", "Snow", "Wind", "Fog"]
+        },
+        {
+          "difficulty": "purple",
+          "category": "Colors of the rainbow",
+          "terms": ["Red", "Orange", "Yellow", "Purple"]
+        }
+      ]
+    }
+  ]
+}

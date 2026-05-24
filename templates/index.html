@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Connections</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Daily word grouping game</p>
+          <h1>Connections</h1>
+          <p class="subhead">Select 4 terms and submit a guess. Find all 4 groups before the mistakes run out.</p>
+        </div>
+
+        <div class="controls-panel">
+          <label class="field">
+            <span>Game</span>
+            <select id="game-select"></select>
+          </label>
+          <button id="restart-button" class="ghost-button" type="button">Restart game</button>
+        </div>
+      </header>
+
+      <section class="scoreboard" aria-label="Game status">
+        <div class="score-card">
+          <span class="score-label">Mistakes left</span>
+          <strong id="mistakes-left">4</strong>
+        </div>
+        <div class="score-card">
+          <span class="score-label">Selected</span>
+          <strong id="selected-count">0 / 4</strong>
+        </div>
+        <div class="score-card status-card">
+          <span class="score-label">Status</span>
+          <strong id="status-message">Pick 4 terms to make a guess.</strong>
+        </div>
+      </section>
+
+      <section class="board-layout">
+        <div class="solved-panel">
+          <div class="panel-heading">
+            <h2>Solved groups</h2>
+            <p>Correct groups rise to the top here.</p>
+          </div>
+          <div id="solved-groups" class="solved-groups"></div>
+        </div>
+
+        <div class="board-panel">
+          <div class="panel-heading compact">
+            <h2>Current grid</h2>
+            <p>Click a tile to select or deselect it.</p>
+          </div>
+          <div id="board" class="board" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="action-row">
+        <button id="shuffle-button" class="ghost-button" type="button">Shuffle remaining tiles</button>
+        <button id="submit-button" class="primary-button" type="button">Submit guess</button>
+      </section>
+
+      <section class="footer-note">
+        <p id="rules-note">Yellow is easiest, then green, blue, and purple.</p>
+      </section>
+    </main>
+
+    <script>
+      window.__INITIAL_GAME_ID__ = "{{ initial_game_id|e }}";
+    </script>
+    <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+  </body>
+</html>
