@@ -45,19 +45,25 @@ function updateUrl(gameId) {
 }
 
 async function fetchGameList() {
-  const response = await fetch("/api/games");
+  const response = await fetch("data/games.json");
   if (!response.ok) {
     throw new Error("Unable to load games");
   }
-  return response.json();
+  const data = await response.json();
+  return data.games;
 }
 
 async function fetchGame(gameId) {
-  const response = await fetch(`/api/game/${encodeURIComponent(gameId)}`);
+  const response = await fetch("data/games.json");
   if (!response.ok) {
-    throw new Error(`Unable to load game ${gameId}`);
+    throw new Error("Unable to load games");
   }
-  return response.json();
+  const data = await response.json();
+  const game = data.games.find(g => g.id === gameId);
+  if (!game) {
+    throw new Error(`Game ${gameId} not found`);
+  }
+  return game;
 }
 
 function shuffleArray(items) {
