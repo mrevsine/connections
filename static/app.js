@@ -323,19 +323,25 @@ async function submitGuess() {
 function renderSolvedGroups() {
   elements.solvedGroups.innerHTML = "";
 
-  for (const group of state.solved) {
+  for (const group of allGroups()) {
+    const solvedGroup = state.solved.find((g) => g.category === group.category);
+    if (!solvedGroup && !state.locked) {
+      continue;
+    }
+
+    const displayGroup = solvedGroup || group;
     const card = document.createElement("article");
     card.className = "solved-group solved-row";
-    card.style.background = DIFFICULTY_COLORS[group.difficulty];
+    card.style.background = DIFFICULTY_COLORS[displayGroup.difficulty];
 
     const heading = document.createElement("div");
     heading.className = "group-title";
-    heading.textContent = group.category;
+    heading.textContent = displayGroup.category;
 
     const list = document.createElement("div");
     list.className = "term-list";
     // render terms as a comma-separated, alphabetized string
-    const sorted = [...group.terms].slice().sort((a, b) => a.localeCompare(b));
+    const sorted = [...displayGroup.terms].slice().sort((a, b) => a.localeCompare(b));
     list.textContent = sorted.join(", ");
 
     card.append(heading, list);

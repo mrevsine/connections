@@ -1,54 +1,133 @@
 {
   "games": [
     {
-      "id": "sample-1",
-      "title": "Sample Connections 1",
+      "id": "Countries",
+      "title": "Countries",
       "groups": [
         {
           "difficulty": "yellow",
-          "category": "Planets in our solar system",
-          "terms": ["Mercury", "Venus", "Earth", "Mars"]
+          "category": "Asian countries we want to visit",
+          "terms": ["Indonesia", "Japan", "Malaysia", "Philippines"]
         },
         {
           "difficulty": "green",
-          "category": "Common musical instruments",
-          "terms": ["Piano", "Guitar", "Violin", "Drum"]
+          "category": "Countries we've been to independently",
+          "terms": ["Canada", "China", "Germany", "Mexico"]
         },
         {
           "difficulty": "blue",
-          "category": "Basic geometric shapes",
-          "terms": ["Circle", "Square", "Triangle", "Rectangle"]
+          "category": "Countries we've hiked in",
+          "terms": ["France", "Iceland", "Peru", "Vietnam"]
         },
         {
           "difficulty": "purple",
-          "category": "Fruits",
-          "terms": ["Apple", "Banana", "Cherry", "Grape"]
+          "category": "Countries we (will) have visited an island of",
+          "terms": ["Belize", "Italy", "Portugal", "USA"]
+        }
+      ]
+    }
+    ,
+    {
+      "id": "Numbers",
+      "title": "Numbers",
+      "groups": [
+        {
+          "difficulty": "yellow",
+          "category": "Ages when we met vs. now",
+          "terms": ["19", "20", "25", "26"]
+        },
+        {
+          "difficulty": "green",
+          "category": "Components of our birth dates",
+          "terms": ["1", "8", "28", "99"]
+        },
+        {
+          "difficulty": "blue",
+          "category": "House numbers we lived at in Chapel Hill",
+          "terms": ["108", "321", "500", "609"]
+        },
+        {
+          "difficulty": "purple",
+          "category": "Great scores to achieve on certain tests",
+          "terms": ["36", "100", "522", "1600"]
         }
       ]
     },
     {
-      "id": "sample-2",
-      "title": "Sample Connections 2",
+      "id": "Plants",
+      "title": "Plants",
       "groups": [
         {
           "difficulty": "yellow",
-          "category": "Things with pages",
-          "terms": ["Book", "Magazine", "Notebook", "Catalog"]
+          "category": "Words in a Simon and Garfunkel title",
+          "terms": ["Parsley", "Sage", "Rosemary", "Thyme"]
         },
         {
           "difficulty": "green",
-          "category": "Things you can throw",
-          "terms": ["Ball", "Frisbee", "Javelin", "Pillow"]
+          "category": "Fruits famous in places we've visited",
+          "terms": ["Cherimoya", "Lemon", "Orange", "Pomegranate"]
         },
         {
           "difficulty": "blue",
-          "category": "Weather words",
-          "terms": ["Rain", "Snow", "Wind", "Fog"]
+          "category": "Scents in smell training",
+          "terms": ["Clove", "Eucalyptus", "Lavender", "Peppermint"]
         },
         {
           "difficulty": "purple",
-          "category": "Colors of the rainbow",
-          "terms": ["Red", "Orange", "Yellow", "Purple"]
+          "category": "Seasonings in Cambodian noodles in Siem Reap",
+          "terms": ["Chili", "Galangal", "Garlic", "Lemongrass"]
+        }
+      ]
+    },
+    {
+      "id": "French",
+      "title": "French",
+      "groups": [
+        {
+          "difficulty": "yellow",
+          "category": "Cafe items starting with C",
+          "terms": ["Canele", "Crepe", "Croissant", "Croquette"]
+        },
+        {
+          "difficulty": "green",
+          "category": "French complimentary words",
+          "terms": ["Bien", "Bravo", "Magnifique", "Parfait"]
+        },
+        {
+          "difficulty": "blue",
+          "category": "French words in chain restaurant names",
+          "terms": ["Au", "Levain", "Pret", "Quotidien"]
+        },
+        {
+          "difficulty": "purple",
+          "category": "French words or phrases Mahler likes to say",
+          "terms": ["Ca Va", "C'est la vie", "Excitee", "Tant Pis"]
+        }
+      ]
+    },
+    {
+      "id": "Movies",
+      "title": "Movies",
+      "groups": [
+        {
+          "difficulty": "yellow",
+          "category": "Starting words of Wes Anderson movie titles",
+          "terms": ["Asteroid", "Fantastic", "French", "Grand"]
+        },
+        {
+          "difficulty": "green",
+          "category": "Words in Michaela's Letterboxd favorites",
+          "terms": ["12", "Bohemian", "Lady", "Princess"]
+        },
+        {
+          "difficulty": "blue",
+          "category": "Words in Mahler's Letterboxd favorites",
+          "terms": ["Alien", "Apes", "Country", "Parasite"]
+        },
+        {
+          "difficulty": "purple",
+          "category": "Words in movies we've seen in theaters",
+          "terms": ["Dune", "Heron", "Killers", "Sorry"]
         }
       ]
     }
