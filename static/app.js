@@ -341,8 +341,9 @@ function renderSolvedGroups() {
     const list = document.createElement("div");
     list.className = "term-list";
     // render terms as a comma-separated, alphabetized string
-    const sorted = [...displayGroup.terms].slice().sort((a, b) => a.localeCompare(b));
-    list.textContent = sorted.join(", ");
+    // const sorted = [...displayGroup.terms].slice().sort((a, b) => a.localeCompare(b));
+    // list.textContent = sorted.join(", ");
+    list.textContent = displayGroup.terms.join(", ");
 
     card.append(heading, list);
     elements.solvedGroups.appendChild(card);
