@@ -37,8 +37,10 @@ function isLongWord(value) {
 }
 
 function longClassFor(value) {
+  // Measure the longest space-delimited subword after stripping punctuation
   const parts = String(value).split(/\s+/).filter(Boolean);
-  const max = parts.length === 0 ? 0 : Math.max(...parts.map((p) => p.length));
+  const cleaned = parts.map((p) => p.replace(/[^\p{L}\p{N}]/gu, ""));
+  const max = cleaned.length === 0 ? 0 : Math.max(...cleaned.map((p) => p.length));
   const len = Math.min(12, max);
   if (len <= 8) return null;
   return `long-${len}`;
