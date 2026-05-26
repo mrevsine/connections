@@ -356,8 +356,6 @@ function renderSolvedGroups() {
       displayGroup.terms.forEach((term, idx) => {
         const span = document.createElement("span");
         span.className = "term-item";
-        const cls = longClassFor(term);
-        if (cls) span.classList.add(cls);
         span.textContent = term;
         list.appendChild(span);
         if (idx < displayGroup.terms.length - 1) {
@@ -386,8 +384,6 @@ function renderSolvedGroups() {
     group.terms.forEach((term, idx) => {
       const span = document.createElement("span");
       span.className = "term-item";
-      const cls = longClassFor(term);
-      if (cls) span.classList.add(cls);
       span.textContent = term;
       list.appendChild(span);
       if (idx < group.terms.length - 1) {
