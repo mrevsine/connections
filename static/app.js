@@ -29,6 +29,10 @@ function normalize(value) {
   return value.trim().toLowerCase();
 }
 
+function isLongWord(value) {
+  return value.replace(/\s+/g, "").length > 8;
+}
+
 function getQueryGameId() {
   const params = new URLSearchParams(window.location.search);
   return params.get("game") || window.__INITIAL_GAME_ID__ || "";
@@ -336,6 +340,9 @@ function renderSolvedGroups() {
       const list = document.createElement("div");
       list.className = "term-list";
       list.textContent = displayGroup.terms.join(", ");
+      if (displayGroup.terms.some(isLongWord)) {
+        list.classList.add("long-word");
+      }
 
       card.append(heading, list);
       elements.solvedGroups.appendChild(card);
@@ -356,6 +363,9 @@ function renderSolvedGroups() {
     const list = document.createElement("div");
     list.className = "term-list";
     list.textContent = group.terms.join(", ");
+    if (group.terms.some(isLongWord)) {
+      list.classList.add("long-word");
+    }
 
     card.append(heading, list);
     elements.solvedGroups.appendChild(card);
@@ -382,6 +392,9 @@ function renderBoard() {
     tile.className = "tile shrink";
     tile.dataset.term = term;
     tile.textContent = term;
+    if (isLongWord(term)) {
+      tile.classList.add("long-word");
+    }
     tile.setAttribute("aria-pressed", String(isSelected(term)));
 
     if (isSelected(term)) {

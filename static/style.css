@@ -509,6 +509,11 @@ button:disabled {
     padding-top: 16px;
   }
 
+  .tile.long-word,
+  .term-list.long-word {
+    font-size: 0.78rem;
+  }
+
   .tile {
     min-height: 70px;
     font-size: 0.85rem;
