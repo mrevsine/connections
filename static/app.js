@@ -30,11 +30,16 @@ function normalize(value) {
 }
 
 function isLongWord(value) {
-  return value.replace(/\s+/g, "").length > 8;
+  const parts = String(value).split(/\s+/).filter(Boolean);
+  if (parts.length === 0) return false;
+  const max = Math.max(...parts.map((p) => p.length));
+  return max > 8;
 }
 
 function longClassFor(value) {
-  const len = Math.min(12, value.replace(/\s+/g, "").length);
+  const parts = String(value).split(/\s+/).filter(Boolean);
+  const max = parts.length === 0 ? 0 : Math.max(...parts.map((p) => p.length));
+  const len = Math.min(12, max);
   if (len <= 8) return null;
   return `long-${len}`;
 }
