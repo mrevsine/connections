@@ -1,32 +1,31 @@
 {
   "games": [
     {
-      "id": "Countries",
-      "title": "Countries",
+      "id": "Plants",
+      "title": "Plants",
       "groups": [
         {
           "difficulty": "yellow",
-          "category": "Asian countries we want to visit",
-          "terms": ["Indonesia", "Japan", "Malaysia", "Philippines"]
+          "category": "Words in a Simon and Garfunkel title",
+          "terms": ["Parsley", "Sage", "Rosemary", "Thyme"]
         },
         {
           "difficulty": "green",
-          "category": "Countries we've been to independently",
-          "terms": ["Canada", "China", "Germany", "Mexico"]
+          "category": "Fruits famous in places we've visited",
+          "terms": ["Cherimoya", "Lemon", "Orange", "Pomegranate"]
         },
         {
           "difficulty": "blue",
-          "category": "Countries we've hiked in",
-          "terms": ["France", "Iceland", "Peru", "Vietnam"]
+          "category": "Scents in smell training",
+          "terms": ["Clove", "Eucalyptus", "Lavender", "Peppermint"]
         },
         {
           "difficulty": "purple",
-          "category": "Countries we (will) have visited an island of",
-          "terms": ["Belize", "Italy", "Portugal", "USA"]
+          "category": "Seasonings in Cambodian noodles in Siem Reap",
+          "terms": ["Chili", "Galangal", "Garlic", "Lemongrass"]
         }
       ]
-    }
-    ,
+    },
     {
       "id": "Numbers",
       "title": "Numbers",
@@ -54,28 +53,132 @@
       ]
     },
     {
-      "id": "Plants",
-      "title": "Plants",
+      "id": "Movies",
+      "title": "Movies",
       "groups": [
         {
           "difficulty": "yellow",
-          "category": "Words in a Simon and Garfunkel title",
-          "terms": ["Parsley", "Sage", "Rosemary", "Thyme"]
+          "category": "Starting words of Wes Anderson movie titles",
+          "terms": ["Asteroid", "Fantastic", "French", "Grand"]
         },
         {
           "difficulty": "green",
-          "category": "Fruits famous in places we've visited",
-          "terms": ["Cherimoya", "Lemon", "Orange", "Pomegranate"]
+          "category": "Words in Michaela's Letterboxd favorites",
+          "terms": ["12", "Bohemian", "Lady", "Princess"]
         },
         {
           "difficulty": "blue",
-          "category": "Scents in smell training",
-          "terms": ["Clove", "Eucalyptus", "Lavender", "Peppermint"]
+          "category": "Words in Mahler's Letterboxd favorites",
+          "terms": ["Alien", "Apes", "Country", "Parasite"]
         },
         {
           "difficulty": "purple",
-          "category": "Seasonings in Cambodian noodles in Siem Reap",
-          "terms": ["Chili", "Galangal", "Garlic", "Lemongrass"]
+          "category": "Words in movies we've seen in theaters",
+          "terms": ["Dune", "Heron", "Killers", "Sorry"]
+        }
+      ]
+    },
+    {
+      "id": "Characters",
+      "title": "Characters",
+      "groups": [
+        {
+          "difficulty": "yellow",
+          "category": "Members of the Simpsons family",
+          "terms": ["Bart", "Homer", "Lisa", "Maggie"]
+        },
+        {
+          "difficulty": "green",
+          "category": "Leading male characters in shows we've watched",
+          "terms": ["Aang", "Don", "Jon", "Kendall"]
+        },
+        {
+          "difficulty": "blue",
+          "category": "Characters Michaela can do an impression of",
+          "terms": ["Gollum", "Jersey Mom", "Marge", "Mort"]
+        },
+        {
+          "difficulty": "purple",
+          "category": "Characters 1 letter away from a metal",
+          "terms": ["Cooper", "Iroh", "Lear", "Ton"]
+        }
+      ]
+    },
+    {
+      "id": "Cities",
+      "title": "Cities",
+      "groups": [
+        {
+          "difficulty": "yellow",
+          "category": "Where we (will) have seen famous ruins",
+          "terms": ["Cuzco", "Rome", "Siem Reap", "Tikal"]
+        },
+        {
+          "difficulty": "green",
+          "category": "Where we've been to the beach",
+          "terms": ["Amalfi", "Fortuna", "Vik", "Wilmington"]
+        },
+        {
+          "difficulty": "blue",
+          "category": "Where we've ridden boats",
+          "terms": ["Baltimore", "Bangkok", "Capri", "Florence"]
+        },
+        {
+          "difficulty": "purple",
+          "category": "Where we've climbed tall towers",
+          "terms": ["Florence", "Granada", "Reykjavik", "Seville"]
+        }
+      ]
+    },
+    {
+      "id": "Parks",
+      "title": "Parks",
+      "groups": [
+        {
+          "difficulty": "yellow",
+          "category": "Parks we've been to in NYC",
+          "terms": ["Brooklyn Bridge", "Cloisters", "Riverside", "Union Square"]
+        },
+        {
+          "difficulty": "green",
+          "category": "Gardens we've been to around DC",
+          "terms": ["Arboretum", "Dumbarton", "Glenstones", "Hillwood"]
+        },
+        {
+          "difficulty": "blue",
+          "category": "Places we've played tennis",
+          "terms": ["Druid Hill", "Fort Reno", "Hearst", "Hunter College"]
+        },
+        {
+          "difficulty": "purple",
+          "category": "Parks we really like",
+          "terms": ["Bolin Creek", "Central Park", "Howard Field", "Rock Creek"]
+        }
+      ]
+    },
+    {
+      "id": "Music",
+      "title": "Music",
+      "groups": [
+        {
+          "difficulty": "yellow",
+          "category": "Musicians in the Bob Dylan biopic",
+          "terms": ["Baez", "Cash", "Guthrie", "Seeger"]
+        },
+        {
+          "difficulty": "green",
+          "category": "Artists in both of our Spotify wrapped top 5s",
+          "terms": ["ATCQ", "Beatles", "Kanye", "Outkast"]
+        },
+        {
+          "difficulty": "blue",
+          "category": "Musicians in the Mad Men soundtrack",
+          "terms": ["Dylan", "Fitzgerald", "RJD2", "Sinatra"]
+        },
+        {
+          "difficulty": "purple",
+          "category": "Musicians we have clothes of",
+          "terms": ["Big Thief", "Flaming Lips", "Led Zeppelin", "Queen"]
         }
       ]
     },
@@ -106,28 +209,54 @@
       ]
     },
     {
-      "id": "Movies",
-      "title": "Movies",
+      "id": "Gifts",
+      "title": "Gifts",
       "groups": [
         {
           "difficulty": "yellow",
-          "category": "Starting words of Wes Anderson movie titles",
-          "terms": ["Asteroid", "Fantastic", "French", "Grand"]
+          "category": "Mahler's gifts to Michaela",
+          "terms": ["Cookbook", "Earrings", "Slipper", "Website"]
         },
         {
           "difficulty": "green",
-          "category": "Words in Michaela's Letterboxd favorites",
-          "terms": ["12", "Bohemian", "Lady", "Princess"]
+          "category": "Michaela's gifts to Mahler",
+          "terms": ["Map", "Painting", "Pottery", "Shirt"]
         },
         {
           "difficulty": "blue",
-          "category": "Words in Mahler's Letterboxd favorites",
-          "terms": ["Alien", "Apes", "Country", "Parasite"]
+          "category": "Gifts we have both given each other",
+          "terms": ["Cookware", "Necklace", "Photo Album", "Prints"]
         },
         {
           "difficulty": "purple",
-          "category": "Words in movies we've seen in theaters",
-          "terms": ["Dune", "Heron", "Killers", "Sorry"]
+          "category": "Gifts Michaela will give Mahler soon",
+          "terms": ["Audemars", "Cartiers", "Ferrari", "Yacht"]
+        }
+      ]
+    },
+    { 
+      "id": "Countries",
+      "title": "Countries",
+      "groups": [
+        {
+          "difficulty": "yellow",
+          "category": "Asian countries we want to visit",
+          "terms": ["Indonesia", "Japan", "Malaysia", "Philippines"]
+        },
+        {
+          "difficulty": "green",
+          "category": "Countries we've been to independently",
+          "terms": ["Canada", "China", "Germany", "Mexico"]
+        },
+        {
+          "difficulty": "blue",
+          "category": "Countries we've hiked in",
+          "terms": ["France", "Iceland", "Peru", "Vietnam"]
+        },
+        {
+          "difficulty": "purple",
+          "category": "Countries we (will) have visited an island of",
+          "terms": ["Belize", "Italy", "Portugal", "USA"]
         }
       ]
     }
