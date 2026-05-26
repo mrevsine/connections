@@ -515,7 +515,7 @@ button:disabled {
   }
 
   .solved-group .term-list {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   /* proportional sizing for words 9-12 so they occupy similar width to 8-letter words */
