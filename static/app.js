@@ -173,7 +173,6 @@ function clearSelection() {
   }
 
   state.selected.clear();
-  setStatus("Selection cleared.", "neutral");
   render();
 }
 
@@ -322,28 +321,41 @@ async function submitGuess() {
 
 function renderSolvedGroups() {
   elements.solvedGroups.innerHTML = "";
+  // If the game is locked and not fully solved (loss), reveal all groups in JSON order.
+  if (state.locked && state.solved.length < allGroups().length) {
+    for (const group of allGroups()) {
+      const displayGroup = state.solved.find((g) => g.category === group.category) || group;
+      const card = document.createElement("article");
+      card.className = "solved-group solved-row";
+      card.style.background = DIFFICULTY_COLORS[displayGroup.difficulty];
 
-  for (const group of allGroups()) {
-    const solvedGroup = state.solved.find((g) => g.category === group.category);
-    if (!solvedGroup && !state.locked) {
-      continue;
+      const heading = document.createElement("div");
+      heading.className = "group-title";
+      heading.textContent = displayGroup.category;
+
+      const list = document.createElement("div");
+      list.className = "term-list";
+      list.textContent = displayGroup.terms.join(", ");
+
+      card.append(heading, list);
+      elements.solvedGroups.appendChild(card);
     }
+    return;
+  }
 
-    const displayGroup = solvedGroup || group;
+  // Otherwise (game ongoing or fully solved), show only solved groups in the order they were solved.
+  for (const group of state.solved) {
     const card = document.createElement("article");
     card.className = "solved-group solved-row";
-    card.style.background = DIFFICULTY_COLORS[displayGroup.difficulty];
+    card.style.background = DIFFICULTY_COLORS[group.difficulty];
 
     const heading = document.createElement("div");
     heading.className = "group-title";
-    heading.textContent = displayGroup.category;
+    heading.textContent = group.category;
 
     const list = document.createElement("div");
     list.className = "term-list";
-    // render terms as a comma-separated, alphabetized string
-    // const sorted = [...displayGroup.terms].slice().sort((a, b) => a.localeCompare(b));
-    // list.textContent = sorted.join(", ");
-    list.textContent = displayGroup.terms.join(", ");
+    list.textContent = group.terms.join(", ");
 
     card.append(heading, list);
     elements.solvedGroups.appendChild(card);
