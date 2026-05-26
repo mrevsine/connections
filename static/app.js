@@ -33,6 +33,12 @@ function isLongWord(value) {
   return value.replace(/\s+/g, "").length > 8;
 }
 
+function longClassFor(value) {
+  const len = Math.min(12, value.replace(/\s+/g, "").length);
+  if (len <= 8) return null;
+  return `long-${len}`;
+}
+
 function getQueryGameId() {
   const params = new URLSearchParams(window.location.search);
   return params.get("game") || window.__INITIAL_GAME_ID__ || "";
@@ -339,10 +345,18 @@ function renderSolvedGroups() {
 
       const list = document.createElement("div");
       list.className = "term-list";
-      list.textContent = displayGroup.terms.join(", ");
-      if (displayGroup.terms.some(isLongWord)) {
-        list.classList.add("long-word");
-      }
+      // render each term as a span so we can size long words individually
+      displayGroup.terms.forEach((term, idx) => {
+        const span = document.createElement("span");
+        span.className = "term-item";
+        const cls = longClassFor(term);
+        if (cls) span.classList.add(cls);
+        span.textContent = term;
+        list.appendChild(span);
+        if (idx < displayGroup.terms.length - 1) {
+          list.appendChild(document.createTextNode(', '));
+        }
+      });
 
       card.append(heading, list);
       elements.solvedGroups.appendChild(card);
@@ -362,10 +376,17 @@ function renderSolvedGroups() {
 
     const list = document.createElement("div");
     list.className = "term-list";
-    list.textContent = group.terms.join(", ");
-    if (group.terms.some(isLongWord)) {
-      list.classList.add("long-word");
-    }
+    group.terms.forEach((term, idx) => {
+      const span = document.createElement("span");
+      span.className = "term-item";
+      const cls = longClassFor(term);
+      if (cls) span.classList.add(cls);
+      span.textContent = term;
+      list.appendChild(span);
+      if (idx < group.terms.length - 1) {
+        list.appendChild(document.createTextNode(', '));
+      }
+    });
 
     card.append(heading, list);
     elements.solvedGroups.appendChild(card);
@@ -391,10 +412,13 @@ function renderBoard() {
     tile.type = "button";
     tile.className = "tile shrink";
     tile.dataset.term = term;
-    tile.textContent = term;
-    if (isLongWord(term)) {
-      tile.classList.add("long-word");
-    }
+    // put the term inside a span so we can target long words
+    const span = document.createElement("span");
+    span.className = "term-text";
+    span.textContent = term;
+    const cls = longClassFor(term);
+    if (cls) span.classList.add(cls);
+    tile.appendChild(span);
     tile.setAttribute("aria-pressed", String(isSelected(term)));
 
     if (isSelected(term)) {

@@ -511,7 +511,28 @@ button:disabled {
 
   .tile.long-word,
   .term-list.long-word {
-    font-size: 0.7rem;
+    font-size: 0.78rem;
+  }
+
+  /* proportional sizing for words 9-12 so they occupy similar width to 8-letter words */
+  .tile .term-text.long-9,
+  .term-list .term-item.long-9 {
+    font-size: 0.76rem;
+  }
+
+  .tile .term-text.long-10,
+  .term-list .term-item.long-10 {
+    font-size: 0.68rem;
+  }
+
+  .tile .term-text.long-11,
+  .term-list .term-item.long-11 {
+    font-size: 0.62rem;
+  }
+
+  .tile .term-text.long-12,
+  .term-list .term-item.long-12 {
+    font-size: 0.57rem;
   }
 
   .tile {
